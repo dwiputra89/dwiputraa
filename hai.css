@@ -1,0 +1,205 @@
+/* Pengaturan ulang dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #1B211A;
+    background-color: #f4f4f4;
+    scroll-behavior: smooth; /* Membuat scroll antar section lebih halus */
+}
+
+/* Header dan Navigasi */
+header {
+    background: #1B211A;
+    color: white;
+    padding: 1rem 0;
+    position: fixed; /* Navigasi tetap di atas */
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    display: block;
+    transition: background 0.3s;
+}
+
+header nav ul li a:hover {
+    background: #555;
+    border-radius: 5px;
+}
+
+/* Bagian Umum */
+section {
+    padding: 6rem 10% 2rem; /* Padding atas disesuaikan dengan tinggi header */
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #1B3C53; /* Warna sekunder yang cerah */
+}
+
+/* Bagian Hero (Beranda) */
+.hero {
+    background: url('placeholder-background.jpg') no-repeat center center/cover; /* Ganti dengan gambar Anda */
+    background-color: #e9ecef;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #333;
+    padding-top: 0;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    color: #1B3C53;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Tombol */
+.button {
+    display: inline-block;
+    background: #BF1A1A;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.button:hover {
+    background: #0056b3;
+}
+
+/* Bagian Proyek */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card h3 {
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+/* Bagian Kontak */
+.contact {
+    text-align: center;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact form label {
+    display: block;
+    text-align: left;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+.contact form input[type="text"],
+.contact form input[type="email"],
+.contact form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact form textarea {
+    resize: vertical;
+}
+
+/* Footer */
+footer {
+    background: #751010;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+/* Media Queries untuk Responsif (Opsional, tapi disarankan) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    header nav ul {
+        margin-top: 0.5rem;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav ul li a {
+        padding: 0.25rem 1rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    section {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
+.profile-photo {
+    width: 190px;
+    height: 250px;
+    border-radius: 8px; /* Memberikan sedikit pembulatan pada sudut */
+    object-fit: cover;
+    border: 5px solid white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 1.5rem;
+}
